@@ -1,0 +1,20 @@
+{
+  "name": "bootstrap",
+  "version": "0.0.1",
+  "description": "Startni projekt uz Bootstrap",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "?.git"
+  },
+  "author": "Vedran Hibler",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-compass": "^2.1.0",
+    "gulp-util": "^3.0.7"
+  }
+}
