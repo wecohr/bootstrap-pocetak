@@ -4,11 +4,12 @@ var gulp = require('gulp'),
     gutil = require('gulp-util');
 
 //Inicjalizacija varijabli foldera
-var sassSources, outputPublic;
+var sassSources, outputPublic, jsSources;
 
 //Definiranje varijabli foldera
 outputPublic = ['public'];
 sassSources = ['components/stylesheet/**/*.scss'];
+jsSources = ['components/stylesheet/scripts/*.js'];
 
 
 //COMPASS - compile sass->css
