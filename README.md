@@ -1,2 +1,3 @@
-# bootstrap-pocetak
-Početni projekt s bootstrapom
+# Bootstrap priprema
+
+Priprema projekta s Twitter Bootstrap frameworkom
