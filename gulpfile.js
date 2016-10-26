@@ -11,7 +11,7 @@ var sassSources, outputPublic, jsSources;
 //Definiranje varijabli foldera
 outputPublic = ['public'];
 sassSources = ['components/stylesheet/**/*.scss'];
-jsSources = ['components/stylesheet/scripts/*.js'];
+jsSources = ['components/scripts/**/*.js'];
 
 //POKRETANJE GULPA
 gulp.task('default', ['sass', 'js','watch', 'browser-sync']);
