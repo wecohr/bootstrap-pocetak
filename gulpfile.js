@@ -9,15 +9,15 @@ var gulp = require('gulp'),
 var sassSources, outputPublic, jsSources, jsSourcesBootstrap, sassSourcesBootstrap, jsSourcesBootstrapjQuery;
 
 //Definiranje varijabli foldera
-jsSourcesBootstrap = ['components/libs/bootstrap-sass/assets/javascripts/**/*.js'];
-jsSourcesBootstrapjQuery = ['components/libs/bootstrap-sass/jquery/**.js'];
+jsSourcesBootstrap = ['components/libs/bootstrap-sass/assets/javascripts/bootstrap.js'];
+jsSourcesBootstrapjQuery = ['components/libs/jquery/dist/jquery.js'];
 sassSourcesBootstrap = ['components/libs/bootstrap-sass/assets/stylesheets/**/*.scss'];
 outputPublic = ['public'];
 sassSources = ['components/stylesheet/style.scss'];
 jsSources = ['components/scripts/**/*.js'];
 
 //POKRETANJE GULPA
-gulp.task('default', ['sass', 'js','watch', 'browser-sync']);
+gulp.task('default', ['sass', 'jqueryjs' ,'bootstrapjs','watch', 'browser-sync']);
 
 
 
@@ -34,11 +34,19 @@ gulp.task('sass', function(){
     .pipe(browserSync.stream());
 });
 
-//CONCAT - spajanje JS u jedan script.js
-gulp.task('js', function(){
-    gulp.src(jsSources && jsSourcesBootstrap && jsSourcesBootstrapjQuery)
-      .pipe(concat('script.js'))
-      .pipe(gulp.dest(outputPublic + '/js'))
+//CONCAT BOOTSTRAP- spajanje JS u jedan script.js
+gulp.task('bootstrapjs', function(){
+    gulp.src(jsSourcesBootstrap)
+      .pipe(concat('bootstrap.js'))
+      .pipe(gulp.dest(outputPublic + '/js/'))
+      .pipe(browserSync.stream());
+});
+
+//CONCAT JQUERY - spajanje JS u jedan script.js
+gulp.task('jqueryjs', function(){
+    gulp.src(jsSourcesBootstrapjQuery)
+      .pipe(concat('jquery.js'))
+      .pipe(gulp.dest(outputPublic + '/js/'))
       .pipe(browserSync.stream());
 });
 
