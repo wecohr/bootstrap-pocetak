@@ -4,6 +4,5 @@
 @import "../libs/bootstrap-sass/assets/stylesheets/bootstrap-compass";
 @import "../libs/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
 
-//Import bootstrap
-@import "base/base";
-@import "modules/navigation";
+//Custom moduli
+@import "custom/cover";

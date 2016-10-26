@@ -8788,3 +8788,195 @@ button.close {
     display: none !important;
   }
 }
+/*
+ * Globals
+ */
+/* Links */
+/* line 6, ../components/stylesheet/custom/_cover.scss */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+/* Custom default button */
+/* line 13, ../components/stylesheet/custom/_cover.scss */
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  color: #333;
+  text-shadow: none;
+  /* Prevent inheritence from `body` */
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+
+/*
+ * Base structure
+ */
+/* line 27, ../components/stylesheet/custom/_cover.scss */
+html,
+body {
+  height: 100%;
+  background-color: #333;
+}
+
+/* line 32, ../components/stylesheet/custom/_cover.scss */
+body {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+/* line 39, ../components/stylesheet/custom/_cover.scss */
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%;
+  /* For at least Firefox */
+  min-height: 100%;
+  -webkit-box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
+}
+
+/* line 47, ../components/stylesheet/custom/_cover.scss */
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+}
+
+/* line 51, ../components/stylesheet/custom/_cover.scss */
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Padding for spacing */
+/* line 57, ../components/stylesheet/custom/_cover.scss */
+.inner {
+  padding: 30px;
+}
+
+/*
+ * Header
+ */
+/* line 65, ../components/stylesheet/custom/_cover.scss */
+.masthead-brand {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* line 70, ../components/stylesheet/custom/_cover.scss */
+.masthead-nav > li {
+  display: inline-block;
+}
+
+/* line 73, ../components/stylesheet/custom/_cover.scss */
+.masthead-nav > li + li {
+  margin-left: 20px;
+}
+
+/* line 76, ../components/stylesheet/custom/_cover.scss */
+.masthead-nav > li > a {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  /* IE8 proofing */
+  color: rgba(255, 255, 255, 0.75);
+  border-bottom: 2px solid transparent;
+}
+
+/* line 85, ../components/stylesheet/custom/_cover.scss */
+.masthead-nav > li > a:hover,
+.masthead-nav > li > a:focus {
+  background-color: transparent;
+  border-bottom-color: #a9a9a9;
+  border-bottom-color: rgba(255, 255, 255, 0.25);
+}
+
+/* line 91, ../components/stylesheet/custom/_cover.scss */
+.masthead-nav > .active > a,
+.masthead-nav > .active > a:hover,
+.masthead-nav > .active > a:focus {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+@media (min-width: 768px) {
+  /* line 99, ../components/stylesheet/custom/_cover.scss */
+  .masthead-brand {
+    float: left;
+  }
+
+  /* line 102, ../components/stylesheet/custom/_cover.scss */
+  .masthead-nav {
+    float: right;
+  }
+}
+/*
+ * Cover
+ */
+/* line 112, ../components/stylesheet/custom/_cover.scss */
+.cover {
+  padding: 0 20px;
+}
+
+/* line 115, ../components/stylesheet/custom/_cover.scss */
+.cover .btn-lg, .cover .btn-group-lg > .btn {
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+/*
+ * Footer
+ */
+/* line 125, ../components/stylesheet/custom/_cover.scss */
+.mastfoot {
+  color: #999;
+  /* IE8 proofing */
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/*
+ * Affix and center
+ */
+@media (min-width: 768px) {
+  /* Pull out the header and footer */
+  /* line 137, ../components/stylesheet/custom/_cover.scss */
+  .masthead {
+    position: fixed;
+    top: 0;
+  }
+
+  /* line 141, ../components/stylesheet/custom/_cover.scss */
+  .mastfoot {
+    position: fixed;
+    bottom: 0;
+  }
+
+  /* Start the vertical centering */
+  /* line 146, ../components/stylesheet/custom/_cover.scss */
+  .site-wrapper-inner {
+    vertical-align: middle;
+  }
+
+  /* Handle the widths */
+  /* line 150, ../components/stylesheet/custom/_cover.scss */
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 100%;
+    /* Must be percentage or pixels for horizontal alignment */
+  }
+}
+@media (min-width: 992px) {
+  /* line 158, ../components/stylesheet/custom/_cover.scss */
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 700px;
+  }
+}
