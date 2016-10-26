@@ -1,0 +1,17 @@
+{
+  "name": "bootstrap",
+  "description": "Startni projekt uz Bootstrap",
+  "main": "gulpfile.js",
+  "authors": [
+    "Vedran Hibler"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/wecohr/bootstrap-pocetak",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
