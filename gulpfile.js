@@ -6,11 +6,14 @@ var gulp = require('gulp'),
     gutil = require('gulp-util');
 
 //Inicjalizacija varijabli foldera
-var sassSources, outputPublic, jsSources;
+var sassSources, outputPublic, jsSources, jsSourcesBootstrap, sassSourcesBootstrap, jsSourcesBootstrapjQuery;
 
 //Definiranje varijabli foldera
+jsSourcesBootstrap = ['components/libs/bootstrap-sass/assets/javascripts/**/*.js'];
+jsSourcesBootstrapjQuery = ['components/libs/bootstrap-sass/jquery/**.js'];
+sassSourcesBootstrap = ['components/libs/bootstrap-sass/assets/stylesheets/**/*.scss'];
 outputPublic = ['public'];
-sassSources = ['components/stylesheet/**/*.scss'];
+sassSources = ['components/stylesheet/style.scss'];
 jsSources = ['components/scripts/**/*.js'];
 
 //POKRETANJE GULPA
@@ -33,7 +36,7 @@ gulp.task('sass', function(){
 
 //CONCAT - spajanje JS u jedan script.js
 gulp.task('js', function(){
-    gulp.src(jsSources)
+    gulp.src(jsSources && jsSourcesBootstrap && jsSourcesBootstrapjQuery)
       .pipe(concat('script.js'))
       .pipe(gulp.dest(outputPublic + '/js'))
       .pipe(browserSync.stream());
