@@ -6,14 +6,15 @@ var gulp = require('gulp'),
     gutil = require('gulp-util');
 
 //Inicjalizacija varijabli foldera
-var sassSources, outputPublic, jsSources, jsSourcesBootstrap, sassSourcesBootstrap, jsSourcesBootstrapjQuery;
+var sassSources, outputPublic,sassSource, jsSources, jsSourcesBootstrap, sassSourcesBootstrap, jsSourcesBootstrapjQuery;
 
 //Definiranje varijabli foldera
 jsSourcesBootstrap = ['components/libs/bootstrap-sass/assets/javascripts/bootstrap.js'];
 jsSourcesBootstrapjQuery = ['components/libs/jquery/dist/jquery.js'];
 sassSourcesBootstrap = ['components/libs/bootstrap-sass/assets/stylesheets/**/*.scss'];
 outputPublic = ['public'];
-sassSources = ['components/stylesheet/style.scss'];
+sassSource = ['components/stylesheet/style.scss'];
+sassSources = ['components/stylesheet/**/*.scss'];
 jsSources = ['components/scripts/**/*.js'];
 
 //POKRETANJE GULPA
@@ -23,7 +24,7 @@ gulp.task('default', ['sass', 'jqueryjs' ,'bootstrapjs','watch', 'browser-sync']
 
 //COMPASS - compile sass->css
 gulp.task('sass', function(){
-  gulp.src(sassSources)
+  gulp.src(sassSource)
     .pipe(compass({
       sass: 'components/stylesheet',
       style: 'expanded',

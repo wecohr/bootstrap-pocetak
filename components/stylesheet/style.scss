@@ -1,3 +1,9 @@
+//Bootstrap moduli
+@import "../libs/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "../libs/bootstrap-sass/assets/stylesheets/bootstrap-mincer";
+@import "../libs/bootstrap-sass/assets/stylesheets/bootstrap-compass";
+@import "../libs/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
+
 //Import bootstrap
 @import "base/base";
-@import "../libs/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "modules/navigation";
